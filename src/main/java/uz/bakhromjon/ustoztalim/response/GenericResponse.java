@@ -13,11 +13,9 @@ import org.springframework.http.ResponseEntity;
 @Setter
 public class GenericResponse<T> extends ResponseEntity<T> {
     private final Long serverTime = System.currentTimeMillis();
-    T data;
 
     public GenericResponse(T data, HttpStatus status) {
-        super(status);
-        this.data = data;
+        super(data, status);
     }
 
     public static <T> GenericResponse ok(T data) {

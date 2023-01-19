@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import java.util.List;
 import java.util.Set;
@@ -20,6 +21,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @SQLDelete(sql = "update subject set is_deleted = true where id = ?")
+@Where(clause = "is_deleted = false")
 public class Subject extends Auditable {
     private String name;
 

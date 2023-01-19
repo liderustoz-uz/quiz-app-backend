@@ -9,5 +9,5 @@ public interface BaseCRUDService<GD, CD, UD> {
 
     GD get(Long id) throws DataNotFoundException;
 
-    Boolean delete(Long id);
+    Boolean delete(Long id) throws DataNotFoundException;
 }

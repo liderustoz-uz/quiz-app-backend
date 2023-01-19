@@ -49,8 +49,9 @@ public class TestServiceImpl extends AbstractService<TestRepository, TestMapper>
     }
 
     @Override
-    public Boolean delete(Long id) {
-        repository.deleteById(id);
+    public Boolean delete(Long id) throws DataNotFoundException {
+        Test test = getPersist(id);
+        repository.delete(test);
         return true;
     }
 

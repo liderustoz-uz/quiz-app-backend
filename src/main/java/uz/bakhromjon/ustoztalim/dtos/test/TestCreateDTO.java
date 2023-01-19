@@ -1,5 +1,6 @@
 package uz.bakhromjon.ustoztalim.dtos.test;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TestCreateDTO {
+    @Schema(example = "1", type = "Long", description = "The Id of the subject")
     private Long subjectId;
+
+    @Schema(example = "What does that mean 'question' in uzbek?", type = "String", description = "The question of the Test")
     private String question;
+
+    @Schema(type = "VariantCreateDTO", description = "The variants of the Test")
     private List<VariantCreateDTO> variants;
 }

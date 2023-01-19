@@ -42,8 +42,9 @@ public class SubjectServiceImpl extends AbstractService<SubjectRepository, Subje
     }
 
     @Override
-    public Boolean delete(Long id) {
-        repository.deleteById(id);
+    public Boolean delete(Long id) throws DataNotFoundException {
+        Subject subject = getPersist(id);
+        repository.delete(subject);
         return true;
     }
 

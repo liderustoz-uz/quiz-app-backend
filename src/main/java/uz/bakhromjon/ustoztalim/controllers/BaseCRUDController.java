@@ -16,5 +16,5 @@ public interface BaseCRUDController<GD, CD, UD> {
     GenericResponse<GD> get(@PathVariable(name = "id") Long id) throws DataNotFoundException;
 
     @DeleteMapping()
-    GenericResponse<Boolean> delete(@RequestParam(name = "id") Long id);
+    GenericResponse<Boolean> delete(@RequestParam(name = "id") Long id) throws DataNotFoundException;
 }
