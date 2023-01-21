@@ -1,13 +1,16 @@
 package uz.bakhromjon.ustoztalim.entities;
 
+import com.vladmihalcea.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.Where;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,6 +27,14 @@ public class Test extends Auditable {
     @ManyToOne
     private Subject subject;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
-    private List<Variant> variants;
+//    @OneToMany(
+//            mappedBy = "test",
+//            cascade = CascadeType.ALL,
+//            orphanRemoval = true
+//    )
+    @Type(JsonType.class)
+    @Column(columnDefinition = "jsonb")
+    private List<Variant> variants = new ArrayList<>();
+
+
 }

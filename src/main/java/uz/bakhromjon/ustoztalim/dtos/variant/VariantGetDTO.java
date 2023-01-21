@@ -6,11 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.bakhromjon.ustoztalim.dtos.AbstractIDDTO;
 
+import java.util.UUID;
+
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class VariantGetDTO extends AbstractIDDTO {
-    private String desc;
+public class VariantGetDTO {
+    private UUID code;
+    private String text;
 }
+
+
+

@@ -7,20 +7,25 @@ import uz.bakhromjon.ustoztalim.consts.ErrorMessages;
 import uz.bakhromjon.ustoztalim.dtos.test.TestCreateDTO;
 import uz.bakhromjon.ustoztalim.dtos.test.TestGetDTO;
 import uz.bakhromjon.ustoztalim.dtos.test.TestUpdateDTO;
-import uz.bakhromjon.ustoztalim.entities.Subject;
 import uz.bakhromjon.ustoztalim.entities.Test;
+import uz.bakhromjon.ustoztalim.entities.Variant;
 import uz.bakhromjon.ustoztalim.exceptions.compileTime.DataNotFoundException;
 import uz.bakhromjon.ustoztalim.mappers.TestMapper;
+import uz.bakhromjon.ustoztalim.mappers.VariantMapper;
 import uz.bakhromjon.ustoztalim.repositories.TestRepository;
 import uz.bakhromjon.ustoztalim.services.AbstractService;
 import uz.bakhromjon.ustoztalim.services.subject.SubjectService;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class TestServiceImpl extends AbstractService<TestRepository, TestMapper> implements TestService {
     @Autowired
     private SubjectService subjectService;
+
+    @Autowired
+    private VariantMapper variantMapper;
 
     public TestServiceImpl(TestRepository repository, TestMapper mapper) {
         super(repository, mapper);
@@ -33,6 +38,7 @@ public class TestServiceImpl extends AbstractService<TestRepository, TestMapper>
         test = repository.save(test);
         return mapper.toGetDTO(test);
     }
+
 
     @Override
     public TestGetDTO update(TestUpdateDTO updateDTO) throws DataNotFoundException {

@@ -10,5 +10,5 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 @Component(value = "variantMapperImpl")
 public interface VariantMapper {
-    List<Variant> toEntityFromCreateDTO(List<VariantCreateDTO> createDTOs);
+    List<Variant> fromCreateDTO(List<VariantCreateDTO> createDTOs);
 }

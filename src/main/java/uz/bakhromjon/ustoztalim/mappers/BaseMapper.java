@@ -1,9 +1,6 @@
 package uz.bakhromjon.ustoztalim.mappers;
 
-import org.mapstruct.BeanMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.*;
 
 
 public interface BaseMapper<E, CD, UD, GD> {
