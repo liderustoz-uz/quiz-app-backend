@@ -14,6 +14,5 @@ import uz.bakhromjon.ustoztalim.dtos.AbstractIDDTO;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SubjectGetDTO extends AbstractIDDTO {
-
     private String name;
 }

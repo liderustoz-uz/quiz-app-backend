@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import uz.bakhromjon.ustoztalim.annotations.CollectionSize;
 import uz.bakhromjon.ustoztalim.dtos.AbstractIDDTO;
 import uz.bakhromjon.ustoztalim.dtos.variant.VariantCreateDTO;
 
@@ -23,5 +24,8 @@ public class TestUpdateDTO extends AbstractIDDTO {
     private String question;
 
     @Schema(type = "VariantCreateDTO", description = "The variants of the Test")
+    @CollectionSize
     private List<VariantCreateDTO> variants;
 }
+
+
