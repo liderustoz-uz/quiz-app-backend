@@ -11,4 +11,6 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQL81Dialect
 
 server:
-  port: 8080
+  port: 9090
+  servlet:
+    context-path: /api

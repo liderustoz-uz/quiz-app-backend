@@ -1,7 +1,7 @@
 package uz.bakhromjon.ustoztalim.annotations;
 
 import jakarta.validation.Constraint;
-import uz.bakhromjon.ustoztalim.constraints.CollectionSizeValidator;
+import uz.bakhromjon.ustoztalim.constraint.CollectionSizeValidator;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

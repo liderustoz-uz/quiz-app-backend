@@ -7,11 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@OpenAPIDefinition(info = @Info(title = "Ustoz-Talim API"), servers = @Server(url = "http://localhost:8080"))
+@OpenAPIDefinition(servers = @Server(url = "https://acb6d88a5595.eu.ngrok.io/api"))
 public class UstozTalimApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(UstozTalimApplication.class, args);
     }
-
 }

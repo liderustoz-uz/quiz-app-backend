@@ -1,7 +1,9 @@
 package uz.bakhromjon.ustoztalim.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
+import uz.bakhromjon.ustoztalim.exception.user.ApiException;
 
 import java.io.Serializable;
 
@@ -29,5 +31,14 @@ public class ErrorResponse implements Serializable {
         setPath(path);
         setMessage(message);
         setData(data);
+    }
+
+    public static ErrorResponse build(ApiException e, HttpServletRequest request) {
+        return new ErrorResponse(
+                e.getClass().getSimpleName(),
+                request.getRequestURI(),
+                e.getLocalizedMessage(),
+                e.getData()
+        );
     }
 }
