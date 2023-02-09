@@ -24,6 +24,7 @@ public class SubjectServiceImpl extends AbstractService<SubjectRepository, Subje
 
     @Override
     public SubjectGetDTO create(SubjectCreateDTO createDTO) {
+        // TODO: 2/9/2023 nomi unique bo'lishi kerak
         Subject subject = mapper.fromCreateDTO(createDTO);
         subject = repository.save(subject);
         return mapper.toGetDTO(subject);
@@ -60,6 +61,7 @@ public class SubjectServiceImpl extends AbstractService<SubjectRepository, Subje
 
     @Override
     public List<SubjectGetDTO> list() {
+        // TODO: 2/9/2023 createdAt bo'yicha sort qilish kerak
         List<Subject> all = repository.findAll();
         return mapper.toGetDTO(all);
     }

@@ -14,4 +14,6 @@ public interface ValidationMessages {
     String FIRST_NAME_NOT_EMPTY = "first_name_not_empty";
     String USERNAME_MAX_MIN = "username_max_min_10_5";
     String PASSWORD_NOT_VALID = "password_not_valid";
+    String PAGE_MIN_VALUE = "page_min_value_0";
+    String PER_PAGE_MIN_VALUE = "per_page_min_value_1";
 }

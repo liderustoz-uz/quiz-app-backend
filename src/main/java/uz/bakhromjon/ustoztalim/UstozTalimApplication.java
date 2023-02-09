@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@OpenAPIDefinition(servers = @Server(url = "https://acb6d88a5595.eu.ngrok.io/api"))
+@OpenAPIDefinition(servers = @Server(url = "https://6401545acac7.eu.ngrok.io/api"))
 public class UstozTalimApplication {
     public static void main(String[] args) {
         SpringApplication.run(UstozTalimApplication.class, args);

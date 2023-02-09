@@ -8,6 +8,7 @@ import uz.bakhromjon.ustoztalim.dto.test.*;
 import uz.bakhromjon.ustoztalim.exception.user.DataNotFoundException;
 import uz.bakhromjon.ustoztalim.request.RandomTestRequest;
 import uz.bakhromjon.ustoztalim.response.GenericResponse;
+import uz.bakhromjon.ustoztalim.response.ResponsePage;
 import uz.bakhromjon.ustoztalim.service.abstraction.TestService;
 
 import java.util.List;
@@ -62,8 +63,8 @@ public class TestController extends AbstractController<TestService>
     @Operation(summary = "Fan bo'yicha testlarni olish")
     @PostMapping("/subject")
     public GenericResponse<List<TestGetDTO>> getList(@RequestBody GetSubjectTestDTO testDTO) {
-        List<TestGetDTO> tests = service.getList(testDTO);
-        return GenericResponse.ok(tests);
+        ResponsePage<TestGetDTO> page = service.getList(testDTO);
+        return GenericResponse.ok(page);
     }
 
 
