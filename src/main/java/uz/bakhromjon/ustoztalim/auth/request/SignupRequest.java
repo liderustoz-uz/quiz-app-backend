@@ -26,7 +26,7 @@ public class SignupRequest {
     private String lastName;
 
     @NotEmpty(message = ValidationMessages.USER_NAME_NOT_EMPTY)
-    @Size(min = 4, max = 10, message = ValidationMessages.USERNAME_MAX_MIN)
+    @Size(min = 4, max = 20, message = ValidationMessages.USERNAME_MAX_MIN)
     private String username;
 
     @NotEmpty(message = ValidationMessages.PASSWORD_NOT_EMPTY)
