@@ -92,6 +92,7 @@
     </dependencies>
 
     <build>
+        <finalName>ustoz-talim</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
