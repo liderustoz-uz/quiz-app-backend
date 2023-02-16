@@ -11,7 +11,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").
                 allowCredentials(true).
-                allowedOrigins("https://6401545acac7.eu.ngrok.io", "http://localhost:3000", "http://localhost:80", "http://161.35.70.130", "https://qvc-test-website.netlify.app").
+                allowedOrigins("https://liderustoz.uz", "http://localhost:3000", "http://localhost:80", "http://161.35.70.130", "https://qvc-test-website.netlify.app").
                 allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH").
                 allowedHeaders("*");
     }
