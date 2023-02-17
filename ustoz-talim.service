@@ -10,3 +10,4 @@ User=root
 ExecStart=/usr/bin/java -jar /root/quiz-app-backend/target/ustoz-talim.jar
 [Install]
 WantedBy=multi-user.target
+
